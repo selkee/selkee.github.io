@@ -1,0 +1,90 @@
+﻿<html>
+	<head>
+		<script src="likanen-etela.js"></script>
+		<style>
+		.content {
+			text-align:center;
+			color:#ffffff;
+			text-shadow: 0px 0px 3px #000000
+		}
+		body {
+			background-color:#53575b;
+			font-family:sans-serif;
+			overflow-x:hidden;
+		}
+		.background-image {
+			background-image:url('bg.jpg');
+			filter: blur(8px);
+			background-position: center;
+			
+			position:absolute;
+			margin:0px;
+			height:100%;
+			width:100%;
+			bottom:0px;
+			overflow-x:hidden;
+		}
+		.content {
+			background-color:rgba(0,0,0,0.45);
+			position:sticky;
+			margin-top:0px;
+			margin-bottom:0px;
+			height:fit-content;
+			width:fit-content;
+			margin-left:auto;
+			margin-right:auto;
+			padding: 8px 16px 8px 16px;
+		}
+		
+		.title {
+			color:#aaaaaa;
+			font-size:12px;
+			font-weight:bold;
+		}
+		
+		#spliffi {
+			background-color:rgba(0,0,0,0.5);
+			border:1px #000000 solid;
+			width:fit-content;
+			padding:4px 8px 4px 0px;
+			color:#ffffff;
+			
+			margin-left:auto;
+			margin-right:auto;
+		}
+		#spliffi:hover {
+			background-color:rgba(0,0,0,0.75);
+		}
+		#spliffi span.img {
+			background: url(spliffi.png);
+			display: inline-block;
+			width:32px;
+			height:32px;
+			vertical-align:-10px;
+			margin-right: 10px;
+		}
+		#spliffi:hover span.img {
+			background-image:url("spliffi.png");
+			background-position:-32px 0px;
+		}
+		</style>
+	</head>
+	<body onload="generate();">
+		<div class='background-image'></div>
+		<div class='content'>
+			<h3 style="margin:0px;">Likanen Etelä Lyrics Generator</h3>
+			<hr>
+			<a id="title" style='font-size:18px;'>title</a>
+			<br>
+			<br>
+			<a id="lyrics" style="font-size:14px;">lyrics</a>
+			<br>
+			<a href="#spliffi" style="text-decoration:none;">
+			<div id="spliffi" onclick="generate();">
+				<span class="img"></span>
+				<span>Polta spliffi</span>
+			</div>
+			</a>
+		</div>
+	</body>
+</html>
